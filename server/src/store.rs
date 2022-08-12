@@ -10,7 +10,7 @@ pub trait Store{
     fn insert(&self, long_url: &str, short_url: &str);
 
 }
-
+#[derive(Clone, Debug)]
 pub struct UrlStore{
     db: UrlDb
 }

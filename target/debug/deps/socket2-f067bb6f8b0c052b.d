@@ -1,0 +1,11 @@
+/home/harry/url-shortner/target/debug/deps/socket2-f067bb6f8b0c052b.rmeta: /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs
+
+/home/harry/url-shortner/target/debug/deps/libsocket2-f067bb6f8b0c052b.rlib: /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs
+
+/home/harry/url-shortner/target/debug/deps/socket2-f067bb6f8b0c052b.d: /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs
+
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/lib.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockaddr.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/socket.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sockref.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/socket2-0.4.4/src/sys/unix.rs:
