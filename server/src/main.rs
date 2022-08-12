@@ -5,6 +5,8 @@ mod api;
 
 
 use rocket::launch;
+use rocket::routes;
+
 use crate::store::{UrlStore, UrlDb};
 use crate::api::url_shortner_controller::shorten_url;
 use std::{collections::HashMap, sync:: Mutex};
@@ -17,6 +19,6 @@ fn rocket() -> _ {
 
     rocket::build()
         .manage(store)
-        .attach(other_fairing)
+        .mount("/", routes![shorten_url])
 
 }

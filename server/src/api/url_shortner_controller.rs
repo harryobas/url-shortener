@@ -11,9 +11,15 @@ use crate::services::url_shortner_service::{Error, UrlShortnerService};
 pub fn shorten_url(
     long_url_dto: Json<LongUrlDTO>, 
     db: &State<UrlStore>) -> Result<Json<ShortUrl>, Status>{
+        
         let long_url = long_url_dto.long_url;
-        if let Ok(short_url) = UrlShortnerService::shorten_url(long_url, *db.inner()){
-   
+        match UrlShortnerService::shorten_url(long_url, *db.inner()){
+            Ok(url) => {
+                let url = ShortUrl{short_url: url};
+                Ok(Json(url))
+            }
+
+            Err(e) => error_status(e)
         }
 }
 
