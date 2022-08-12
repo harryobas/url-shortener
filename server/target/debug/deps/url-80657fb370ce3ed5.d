@@ -1,0 +1,13 @@
+/home/harry/url-shortner/server/target/debug/deps/url-80657fb370ce3ed5.rmeta: /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/lib.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/encoding.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/host.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/origin.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/path_segments.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/parser.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/slicing.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/form_urlencoded.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/quirks.rs
+
+/home/harry/url-shortner/server/target/debug/deps/url-80657fb370ce3ed5.d: /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/lib.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/encoding.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/host.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/origin.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/path_segments.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/parser.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/slicing.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/form_urlencoded.rs /home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/quirks.rs
+
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/lib.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/encoding.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/host.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/origin.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/path_segments.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/parser.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/slicing.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/form_urlencoded.rs:
+/home/harry/.cargo/registry/src/github.com-1ecc6299db9ec823/url-1.7.2/src/quirks.rs:

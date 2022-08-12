@@ -1,0 +1,15 @@
+error[E0658]: use of unstable library feature 'thread_local_const_init'
+ --> <anon>:3:5
+  |
+3 | /     thread_local! {
+4 | |         static MY_PROBE: usize = const { 10 };
+5 | |     }
+  | |_____^
+  |
+  = note: see issue #84223 <https://github.com/rust-lang/rust/issues/84223> for more information
+  = help: add `#![feature(thread_local_const_init)]` to the crate attributes to enable
+  = note: this error originates in the macro `$crate::__thread_local_inner` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0658`.
