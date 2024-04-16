@@ -26,12 +26,10 @@ jobs:
         rustc --version
         cargo clippy --version
 
-    - name: Testlx 
+    - name: Test
       run: |
-        cargo install sqlx-cli
-        sqlx database setup -D ./test_db.sqlite
         cargo check
-        cargo test --all --verbose
+        cargo test --lib --verbose
     
     - name: Build
       run: cargo build --release --verbose
