@@ -28,6 +28,8 @@ jobs:
 
     - name: Test
       run: |
+        cargo install sqlx-cli
+        sqlx database setup test_db.sqlite
         cargo check
         cargo test --all --verbose
     
