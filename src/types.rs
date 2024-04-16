@@ -1,10 +1,10 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize, sqlx::FromRow)]
 pub struct UrlInfo {
     pub key: String,
     pub long_url: String,
-    pub short_url: String
+    pub short_url: String,
 }
 
 impl UrlInfo {
@@ -12,11 +12,11 @@ impl UrlInfo {
         Self {
             key,
             long_url,
-            short_url
+            short_url,
         }
     }
 }
 #[derive(Debug, Clone, Deserialize)]
 pub struct UrlDTO {
-    pub long_url: String
+    pub long_url: String,
 }
