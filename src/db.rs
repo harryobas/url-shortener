@@ -10,6 +10,8 @@ use sqlx::{
 };
 use std::{str::FromStr, time::Duration};
 
+pub const DATABASE_URL: &str = "sqlite://db.sqlite";
+
 pub async fn init_db(database_url: &str) -> Result<SqlitePool, sqlx::Error> {
     let pool_timeout = Duration::from_secs(60);
     let pool_max_connections = 1;

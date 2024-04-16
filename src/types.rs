@@ -18,5 +18,5 @@ impl UrlInfo {
 }
 #[derive(Debug, Clone, Deserialize)]
 pub struct UrlDTO {
-    long_url: String
+    pub long_url: String
 }
