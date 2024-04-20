@@ -1,37 +1,34 @@
-use url_shortener::db;
-use url_shortener::run;
 
-extern crate env_logger;
+use url_shortener::{api, db, AppState};
+use axum::routing::{get, post};
 
-use clap::Arg;
+use std::net::SocketAddr;
+
+//extern crate env_logger;
 use log::info;
 
-#[tokio::main(flavor = "multi_thread")]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let cli_matches = clap::Command::new("url_shortener")
-        .version("0.1.0")
-        .about("A service that creates short URLs from long URLs")
-        .arg(
-            Arg::new("port")
-                .long("port")
-                .short('p')
-                .help("port to listen on")
-                .default_value("4000"),
-        )
-        .get_matches();
-
+fn init_logger(port: u16) {
     std::env::set_var("RUST_LOG", "server=info");
     env_logger::init();
 
-    let pool = db::init_db(db::DATABASE_URL).await?;
-    let port = cli_matches
-        .get_one::<String>("port")
-        .unwrap()
-        .parse::<u16>()?;
-
-    info!("Starting server. port={}", port);
-
-    run(pool, port).await?;
-
-    Ok(())
+    info!("Starting server on port={}", port);
 }
+
+#[tokio::main(flavor = "multi_thread")]
+async fn main() {
+
+    init_logger(3000);
+
+    let pool = db::init_db(db::DATABASE_URL).await.unwrap();
+    let state = AppState { pool };
+
+    let app = axum::Router::new()
+        .route("/", post(api::shorten_url))
+        .route("/:key", get(api::retrieve_long_url))
+        .with_state(state);
+
+    let addr = SocketAddr::from(([127, 0, 0, 1], 3000));
+    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
+    axum::serve(listener, app).await.unwrap();
+}
+
