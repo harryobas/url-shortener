@@ -21,14 +21,14 @@ pub async fn shorten_url(
             if let Ok(url_info) = get_url_info_with_long_url(
                 url_repo.clone(), &url
             ).await {
-                return Ok(ApiResponse::JsonData(url_info));
+                Ok(ApiResponse::JsonData(url_info))
             }else {
                 let key = generate_unique_key();
                 let short_url = format!("http://localhost:/{key}");
                 match create_url_info(url_repo,&key, &url, &short_url)
                     .await {
-                        Ok(url_info) => return Ok(ApiResponse::JsonData(url_info)),
-                        Err(_e) =>  return Err(ApiError::InternalServerError("something went wrong".to_string())),
+                        Ok(url_info) => Ok(ApiResponse::JsonData(url_info)),
+                        Err(_e) =>  Err(ApiError::InternalServerError("something went wrong".to_string())),
                     }
                 }
             }
@@ -50,9 +50,9 @@ pub async fn retrieve_long_url(
             let body = b"".to_vec();
             headers.insert("Location".into(), url_info.long_url).unwrap();
             
-            return Ok(ApiResponse::Redirected{status_code, headers, body});
+            Ok(ApiResponse::Redirected{status_code, headers, body})
         }else {
-            return Err(ApiError::NotFound("url not found".to_string()));
+            Err(ApiError::NotFound("url not found".to_string()))
         }
 }
 

@@ -71,13 +71,11 @@ impl IntoResponse for ApiResponse {
             ApiResponse::Ok => (StatusCode::OK).into_response(),
             ApiResponse::Created => (StatusCode::CREATED).into_response(),
             ApiResponse::Redirected{status_code, headers, body} =>{
-                let headers_key = headers.keys()
-                    .map(|s|s.clone())
+                let headers_key = headers.keys().cloned()
                     .collect::<Vec<String>>()
                     .first().unwrap().clone();
 
-                let headers_value = headers.values()
-                    .map(|s| s.clone())
+                let headers_value = headers.values().cloned()
                     .collect::<Vec<String>>()
                     .first().unwrap().clone();
             
