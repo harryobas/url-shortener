@@ -1,7 +1,6 @@
 use std::collections::HashMap;
-use std::sync::Arc;
-
 use serde::{Deserialize, Serialize};
+
 use axum::response::IntoResponse;
 use axum::http::StatusCode;
 use axum:: Json;
@@ -54,7 +53,7 @@ impl IntoResponse for ApiError {
     }
 }
 
-#[derive(Debug, Deserialize)]
+#[derive(Debug, Clone, Serialize)]
 pub enum ApiResponse {
     Ok,
     Created,
@@ -86,8 +85,7 @@ impl IntoResponse for ApiResponse {
                 Response::builder()
                     .status(StatusCode::from_u16(status_code).unwrap())
                     .header(&headers_key, &headers_value)
-                    .body(Body::from(body)).unwrap()
-                    
+                    .body(Body::from(body)).unwrap()       
             } 
             ApiResponse::JsonData(url_info) => (StatusCode::OK, Json(url_info)).into_response(),
         }

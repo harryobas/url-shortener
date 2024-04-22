@@ -1,6 +1,5 @@
 use sqlx::{
-    sqlite::{SqliteConnectOptions, SqliteJournalMode, SqlitePoolOptions, SqliteSynchronous},
-    SqlitePool,
+    sqlite::{SqliteConnectOptions, SqliteJournalMode, SqlitePoolOptions, SqliteSynchronous}, Executor, SqlitePool
 };
 use std::{str::FromStr, time::Duration};
 
@@ -21,6 +20,7 @@ pub async fn init_db(database_url: &str) -> Result<SqlitePool, sqlx::Error> {
         .idle_timeout(pool_timeout)
         .connect_with(options)
         .await?;
+
 
     Ok(pool)
 }
